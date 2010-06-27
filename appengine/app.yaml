@@ -1,0 +1,10 @@
+
+application: transitsource
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+  - url: /(.*)\.js(on)?
+    script: serve.py
+
