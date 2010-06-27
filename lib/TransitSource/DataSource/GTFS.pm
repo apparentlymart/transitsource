@@ -90,7 +90,7 @@ sub populate_data {
     }
     else {
         $agency_row = $agencies_data->[0];
-        $agency_id = $agency_row->{agency_id};
+        $agency_id = $agency_row->{agency_id} || '';
     }
 
     unless ($agency_row) {
