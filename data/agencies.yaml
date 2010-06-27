@@ -42,3 +42,29 @@ tahoe-regional-transit:
   gtfs_archive: tahoe/tahoe_gtfs.zip
   gtfs_source: http://trilliumtransit.com/transit_feeds/tahoe/google_transit.zip
   gtfs_agency_id: 14
+
+sacramento-rt:
+  data_type: gtfs
+  gtfs_archive: sacramento-rt/srt_gtfs.zip
+  gtfs_source: http://iportal.sacrt.com/GTFS/SRTD/google_transit.zip
+
+trimet:
+  data_type: gtfs
+  gtfs_archive: trimet/trimet_gtfs.zip
+  gtfs_source: http://developer.trimet.org/schedule/gtfs.zip
+
+unitrans:
+  data_type: gtfs
+  gtfs_archive: unitrans/unitrans_gtfs.zip
+  gtfs_source: http://iportal.sacrt.com/GTFS/Unitrans/google_transit.zip
+
+la-metro:
+  data_type: gtfs
+  gtfs_archive: la-metro/la_metro_gtfs.zip
+  gtfs_source: http://developer.metro.net/gtfs/google_transit.zip
+
+boston-mbta:
+  data_type: gtfs
+  gtfs_archive: boston-mbta/mbta_gtfs.zip
+  gtfs_source: http://www.eot.state.ma.us/downloads/developers_beta/MBTA-1.zip
+
