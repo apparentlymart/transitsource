@@ -19,6 +19,10 @@ sub write_agency_data {
 
     my $routes = $agency->routes;
     write_json("$agency_output_dir/routes", [ map { $_->as_json_dict } @$routes ]);
+    mkdir("$agency_output_dir/routes");
+    foreach my $route (@$routes) {
+        write_json("$agency_output_dir/routes/".$route->id, $route->as_json_dict);
+    }
 }
 
 sub write_agency_summary_file {
