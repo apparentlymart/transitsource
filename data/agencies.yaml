@@ -1,0 +1,44 @@
+
+sfmta:
+  data_type: gtfs
+  gtfs_archive: sfmta/muni_gtfs.zip
+  gtfs_source: http://www.sfmta.com/transitdata/google_transit.zip
+
+nyc-subway:
+  data_type: gtfs
+  gtfs_archive: nyc-mta/subway_gtfs.zip
+  gtfs_source: http://mta.info/developers/data/nyct/subway/google_transit.zip
+
+nyc-bus:
+  data_type: gtfs
+  gtfs_archive: nyc-mta/bus_gtfs.zip
+  gtfs_source: http://mta.info/developers/data/nyct/bus/google_transit.zip
+
+bart:
+  data_type: gtfs
+  gtfs_archive: bart/bart_gtfs.zip
+  gtfs_source: http://www.bart.gov/dev/schedules/google_transit.zip
+  gtfs_agency_id: BART
+
+airbart:
+  data_type: gtfs
+  gtfs_archive: bart/bart_gtfs.zip
+  gtfs_source: http://www.bart.gov/dev/schedules/google_transit.zip
+  gtfs_agency_id: AirBART
+
+golden-gate-ferry:
+  data_type: gtfs
+  gtfs_archive: sf-bay-ferries/ferries_gtfs.zip
+  gtfs_source: http://trilliumtransit.com/transit_feeds/sfbay-ferries/google_transit.zip
+  gtfs_agency_id: 12
+
+caltrain:
+  data_type: gtfs
+  gtfs_archive: caltrain/caltrain_gtfs.zip
+  gtfs_source: http://www.caltrain.com/google_transit_feed/latest/google_transit.zip
+
+tahoe-regional-transit:
+  data_type: gtfs
+  gtfs_archive: tahoe/tahoe_gtfs.zip
+  gtfs_source: http://trilliumtransit.com/transit_feeds/tahoe/google_transit.zip
+  gtfs_agency_id: 14

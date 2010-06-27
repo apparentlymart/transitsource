@@ -1,0 +1,43 @@
+
+=head1 NAME
+
+build - Produce JSON data structures from agency data
+
+=cut
+
+use strict;
+use warnings;
+
+use FindBin;
+use lib "$FindBin::Bin/../lib";
+use TransitSource;
+use TransitSource::Generator;
+
+my @agencies = @ARGV;
+
+my $ts = TransitSource->new(agencies_file => "$FindBin::Bin/../data/agencies.yaml");
+my $data_dir = "$FindBin::Bin/../data";
+my $output_dir = "$FindBin::Bin/../output";
+mkdir($output_dir);
+
+unless (@agencies) {
+    my $all_agencies = $ts->all_agencies;
+    @agencies = keys %$all_agencies;
+}
+
+my @agency_objects = ();
+foreach my $agency_key (@agencies) {
+    my $agency = $ts->agency($agency_key);
+
+    unless ($agency) {
+        warn "There is no agency called $agency_key\n";
+        next;
+    }
+
+    $agency->build_output($data_dir, $output_dir);
+    push @agency_objects, $agency;
+}
+
+TransitSource::Generator->write_agency_summary_file(\@agency_objects, $output_dir);
+
+
